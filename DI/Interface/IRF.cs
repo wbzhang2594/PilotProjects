@@ -4,13 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Enums
+namespace DI
 {
-    class Program
+    public interface IRF
     {
-        static void Main(string[] args)
-        {
-            
-        }
     }
 }

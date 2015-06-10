@@ -1,0 +1,14 @@
+﻿<Window x:Class="ImageProcessing.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Image Grid.Column="0"  Name="imgCanvas0" HorizontalAlignment="Left"  VerticalAlignment="Top"/>
+        <Image Grid.Column="1"  Name="imgCanvas1" HorizontalAlignment="Left" VerticalAlignment="Top" />
+
+    </Grid>
+</Window>
