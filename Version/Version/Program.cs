@@ -10,6 +10,13 @@ namespace PilotVersion
     {
         static void Main(string[] args)
         {
+            {
+                Version ver = new Version("11.00.00");
+            }
+            {
+                Version ver = new Version("A11.00.00");
+            }
+
             //Version ver1 = new Version("1");
             Version ver1_1 = new Version("1.1");
             //Version ver_R1_1 = new Version("R1.1"); //cannot support
