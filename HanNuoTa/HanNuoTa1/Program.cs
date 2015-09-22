@@ -20,7 +20,7 @@ namespace HanNuoTa1
         static UInt64 Steps = 0;
         static void Main(string[] args)
         {
-            const int totalPieces = 64;
+            const int totalPieces = 32;
             init(totalPieces);
 
             MoveOneBlock(totalPieces, location.A, location.C);
