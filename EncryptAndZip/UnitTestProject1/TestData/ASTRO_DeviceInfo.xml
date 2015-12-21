@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<MultipleFieldsXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Field Name="RadInfoGeneralElectronicSerialNumber_A41744" ValueShallLocalize="false">
+    <Value xsi:type="xsd:string">9609A4020344D9E4</Value>
+  </Field>
+  <Field Name="RadInfoGeneralBootloaderVersion_A7567" ValueShallLocalize="false">
+    <Value xsi:type="xsd:string">R20.03.05</Value>
+  </Field>
+  <Field Name="RadInfoGeneralDSPVersion_A7892" ValueShallLocalize="false">
+    <Value xsi:type="xsd:string">R13.00.00</Value>
+  </Field>
+  <Field Name="RadInfoGeneralNautilusVersion_A8564" ValueShallLocalize="false">
+    <Value xsi:type="xsd:string">N/A</Value>
+  </Field>
+  <Field Name="RadInfoGeneralPSDTVersion_A8768" ValueShallLocalize="false">
+    <Value xsi:type="xsd:string">R07.00.00</Value>
+  </Field>
+  <Field Name="RadInfoGeneralTuningVersion_A9509" ValueShallLocalize="false">
+    <Value xsi:type="xsd:string">R01.10.00</Value>
+  </Field>
+  <Field Name="RadInfoGeneralUCMVersion_A9591" ValueShallLocalize="false">
+    <Value xsi:type="xsd:string">D010722</Value>
+  </Field>
+  <Field Name="RadInfoGeneralSecureHardwareVersion" ValueShallLocalize="false">
+    <Value xsi:type="xsd:string">SHWY03</Value>
+  </Field>
+  <Field Name="RadInfoGeneralSecureHardwareType" ValueShallLocalize="false">
+    <Value xsi:type="xsd:string">MACE</Value>
+  </Field>
+  <Field Name="RadInfoOptionExpansionBoardBoardFirmwareVersion_A37048" ValueShallLocalize="false">
+    <Value xsi:type="xsd:string">D08.10.13</Value>
+  </Field>
+  <Field Name="RadInfoOptionExpansionBoardBoardName_A37549" ValueShallLocalize="false">
+    <Value xsi:type="xsd:string">Full Feature</Value>
+  </Field>
+  <Field Name="RadInfoOptionExpansionBoardBoardType_A37049" ValueShallLocalize="false">
+    <Value xsi:type="xsd:string">OB01</Value>
+  </Field>
+</MultipleFieldsXML>
