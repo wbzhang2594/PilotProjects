@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TRWatcher", "TRWatcher\TRWatcher.csproj", "{DFE2A2B2-B4A4-4A7A-A8D6-D2368BA577EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WatcherConsole", "WatcherConsole\WatcherConsole.csproj", "{18D25E1D-1D09-49BA-94B1-F42F1147E99C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DFE2A2B2-B4A4-4A7A-A8D6-D2368BA577EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFE2A2B2-B4A4-4A7A-A8D6-D2368BA577EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFE2A2B2-B4A4-4A7A-A8D6-D2368BA577EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFE2A2B2-B4A4-4A7A-A8D6-D2368BA577EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18D25E1D-1D09-49BA-94B1-F42F1147E99C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18D25E1D-1D09-49BA-94B1-F42F1147E99C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18D25E1D-1D09-49BA-94B1-F42F1147E99C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18D25E1D-1D09-49BA-94B1-F42F1147E99C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

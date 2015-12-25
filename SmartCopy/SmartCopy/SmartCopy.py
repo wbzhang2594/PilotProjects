@@ -1,11 +1,12 @@
-import os
+ï»¿import os
 import hashlib
 
-root = "D:\\TFS\\201510\\_ServerBuild_sim_0_bak_0\\"	#Òª±éÀúµÄÄ¿Â¼
-root2 = "D:\\TFS\\201510\\_ServerBuild_sim_1_EMChanged_1\\"	#Òª±éÀúµÄÄ¿Â¼
-root_source = "D:\\_Test\\TestFileCopy\\F1\\"
-root_target = "D:\\_Test\\TestFileCopy\\F2\\"
-
+root = "D:\\TFS\\201510\\_ServerBuild_sim_0_bak_0\\"	#Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿Â¼
+root2 = "D:\\TFS\\201510\\_ServerBuild_sim_1_EMChanged_1\\"	#Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿Â¼
+##root_source = "D:\\TFS\\201510\\_ServerBuild_sim\\"
+##root_target = "D:\\TFS\\201508\\_ServerBuild_sim\\"
+root_source = "D:\\TFS\\201510\\_ServerBuild_sim_Build1\\"
+root_target = "D:\\TFS\\201510\\_ServerBuild_sim_Clean_Build2\\"
 
 def hashfile(filepath):
     sha1 = hashlib.sha1()
