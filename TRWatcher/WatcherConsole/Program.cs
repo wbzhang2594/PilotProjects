@@ -25,16 +25,28 @@ namespace WatcherConsole
 
                 string pageHtml = Encoding.Default.GetString(pageData);  //如果获取网站页面采用的是GB2312，则使用这句            
 
-                string pageHtml2 = Encoding.UTF8.GetString(pageData); //如果获取网站页面采用的是UTF-8，则使用这句
+                try
+                {
+                    File.WriteAllText(@"d:\_Test\TRWatcher\FailedCases.json", pageHtml);
+                }
+                catch
+                {
+
+                }
 
                 var jArray = JsonConvert.DeserializeObject(pageHtml) as Newtonsoft.Json.Linq.JArray;
                 foreach (var item in jArray)
                 {
-                    if (item.Value<string>("AssignToEngineer").Equals("nebula", StringComparison.InvariantCultureIgnoreCase))
+                    string message = item.Value<string>("Message");
+                    string CleanMessage = message.Replace("&nbsp;", " ");
+
+                    if (item.Value<string>("Message").Equals("[ThreadSafeIssue]", StringComparison.InvariantCultureIgnoreCase))
                     {
+                        string FullName = item.Value<string>("FullName");
                     }
+                    
+
                 }
-                var jsonString = File.ReadAllText(@"C:\Users\rxt867\Desktop\Failed.json");
             }
             catch
             {
