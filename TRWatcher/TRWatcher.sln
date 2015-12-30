@@ -9,10 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WatcherConsole", "WatcherCo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataContract", "DataContract\DataContract.csproj", "{C142483D-F187-4D7C-99D0-7D0E64EAE644}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WatcherConsole.Tests", "WatcherConsole.Tests\WatcherConsole.Tests.csproj", "{15684C43-75C0-47B4-883A-4AEE5DAE1CD2}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataContract.Tests", "DataContract.Tests\DataContract.Tests.csproj", "{B8927865-E1B8-4275-836F-7A1A57914A70}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,14 +27,6 @@ Global
 		{C142483D-F187-4D7C-99D0-7D0E64EAE644}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C142483D-F187-4D7C-99D0-7D0E64EAE644}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C142483D-F187-4D7C-99D0-7D0E64EAE644}.Release|Any CPU.Build.0 = Release|Any CPU
-		{15684C43-75C0-47B4-883A-4AEE5DAE1CD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{15684C43-75C0-47B4-883A-4AEE5DAE1CD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{15684C43-75C0-47B4-883A-4AEE5DAE1CD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{15684C43-75C0-47B4-883A-4AEE5DAE1CD2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B8927865-E1B8-4275-836F-7A1A57914A70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B8927865-E1B8-4275-836F-7A1A57914A70}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B8927865-E1B8-4275-836F-7A1A57914A70}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B8927865-E1B8-4275-836F-7A1A57914A70}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
