@@ -59,7 +59,15 @@
     <None Include="FailedCases.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="Log4Net.config" />
+    <None Include="OneCases.json" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataContract\DataContract.csproj">
+      <Project>{c142483d-f187-4d7c-99d0-7d0e64eae644}</Project>
+      <Name>DataContract</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
