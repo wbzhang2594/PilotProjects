@@ -11,4 +11,10 @@ namespace DataContract
         CaseHistory,
         CurrentFailedCase,
     }
+
+    public enum RunMode
+    {
+        local,
+        web,
+    }
 }
