@@ -13,27 +13,27 @@ namespace Roles
 {
     class Local_DataQuerier : Singleton<Web_DataQuerier>, IDataQuerier
     {
-        public JArray GetHistoryOfFailedCases(string caseItem)
+        public JObject GetHistoryOfFailedCases(string caseItem)
         {
-            string MockJsonFile = "FailedCases.json";
+            string MockJsonFile = "OneCases.json";
             return GetJSonResultFromFile(MockJsonFile);
 
         }
 
-        private static JArray GetJSonResultFromFile(string MockJsonFile)
+        private static JObject GetJSonResultFromFile(string MockJsonFile)
         {
             string ExecutingAssemblyPath = Assembly.GetExecutingAssembly().Location;
             string FilePath = Path.Combine(ExecutingAssemblyPath, "LocalTestResource", MockJsonFile);
 
             string jsonContent = File.ReadAllText(FilePath);
-            var jArray = JsonConvert.DeserializeObject(jsonContent) as Newtonsoft.Json.Linq.JArray;
+            var jArray = JsonConvert.DeserializeObject(jsonContent) as Newtonsoft.Json.Linq.JObject;
 
             return jArray;
         }
 
-        public JArray GetUpToDateFailedCases()
+        public JObject GetUpToDateFailedCases()
         {
-            string MockJsonFile = "OneCases.json";
+            string MockJsonFile = "FailedCases.json";
             return GetJSonResultFromFile(MockJsonFile);
         }
     }

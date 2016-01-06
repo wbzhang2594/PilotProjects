@@ -29,7 +29,12 @@ namespace WatcherConsole
                     @"BLLTest_PCT:BL.Operation.PostCheckInTest.PCRCompileTest.PCRPackunPack_Par_R260_NA",
                 };
 
-                
+                foreach (var item in CareList)
+                {
+                    var testResult = TRFactory.SingleInstance.CreateDataQuerier(RunMode.web).GetHistoryOfFailedCases(item);
+                    
+                    
+                }
 
             }
             catch (Exception ex)

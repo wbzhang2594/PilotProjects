@@ -5,14 +5,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DataContract.DesignPattern;
 
 namespace WatcherConsole
 {
-    class TRFactory
+    class TRFactory : Singleton<TRFactory>
     {
-        IDataAnalyser CreateDataAnalyser(DataCategory dataCategory)
+        public IDataAnalyser CreateDataAnalyser(DataCategory dataCategory)
         {
-            switch(dataCategory)
+            switch (dataCategory)
             {
                 case DataCategory.CaseHistory:
                     {
@@ -29,7 +30,7 @@ namespace WatcherConsole
             }
         }
 
-        IDataQuerier CreateDataQuerier(RunMode runMode)
+        public IDataQuerier CreateDataQuerier(RunMode runMode)
         {
             switch (runMode)
             {

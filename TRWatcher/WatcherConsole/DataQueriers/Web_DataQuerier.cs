@@ -12,21 +12,21 @@ namespace Roles
     class Web_DataQuerier : Singleton<Web_DataQuerier>, IDataQuerier
     {
 
-        public Newtonsoft.Json.Linq.JArray GetUpToDateFailedCases()
+        public Newtonsoft.Json.Linq.JObject GetUpToDateFailedCases()
         {
             string QueryString = @"http://nebula:3000/api/Failed";
 
             return GetJsonResult(QueryString);
         }
 
-        public Newtonsoft.Json.Linq.JArray GetHistoryOfFailedCases(string caseItem)
+        public Newtonsoft.Json.Linq.JObject GetHistoryOfFailedCases(string caseItem)
         {
 
             string QueryString = @"http://nebula:3000/api/TestCases/" + caseItem;
             return GetJsonResult(QueryString);
         }
 
-        private static Newtonsoft.Json.Linq.JArray GetJsonResult(string QueryString)
+        private static Newtonsoft.Json.Linq.JObject GetJsonResult(string QueryString)
         {
             WebClient MyWebClient = new WebClient();
 
@@ -34,7 +34,7 @@ namespace Roles
 
             string pageHtml = Encoding.UTF8.GetString(pageData);
 
-            var jArray = JsonConvert.DeserializeObject(pageHtml) as Newtonsoft.Json.Linq.JArray;
+            var jArray = JsonConvert.DeserializeObject(pageHtml) as Newtonsoft.Json.Linq.JObject;
 
             return jArray;
         }

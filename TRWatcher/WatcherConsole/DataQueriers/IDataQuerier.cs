@@ -9,8 +9,8 @@ namespace Roles
 {
     interface IDataQuerier
     {
-        JArray GetUpToDateFailedCases();
+        JObject GetUpToDateFailedCases();
 
-        JArray GetHistoryOfFailedCases(string caseItem);
+        JObject GetHistoryOfFailedCases(string caseItem);
     }
 }
