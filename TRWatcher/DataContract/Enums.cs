@@ -12,9 +12,9 @@ namespace DataContract
         CurrentFailedCase,
     }
 
-    public enum WorkMode
+    public enum RunMode
     {
-        Online,
-        Local,
+        local,
+        web,
     }
 }

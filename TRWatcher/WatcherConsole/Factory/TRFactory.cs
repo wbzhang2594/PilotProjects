@@ -5,12 +5,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DataContract.DesignPattern;
 
 namespace WatcherConsole
 {
-    class TRFactory
+    class TRFactory : Singleton<TRFactory>
     {
-        IDataAnalyser CreateDataAnalyser(DataCategory dataCategory)
+        public IDataAnalyser CreateDataAnalyser(DataCategory dataCategory)
         {
             switch (dataCategory)
             {
@@ -24,14 +25,28 @@ namespace WatcherConsole
                     }
                 default:
                     {
-                        throw new NotSupportedException();
+                        throw new NotSupportedException(dataCategory.ToString());
                     }
             }
         }
 
-        IDataQuerier CreateDataQuerier(WorkMode)
+        public IDataQuerier CreateDataQuerier(RunMode runMode)
+        {
+            switch (runMode)
+            {
+                case RunMode.local:
+                    {
+                        return Local_DataQuerier.SingleInstance;
+                    }
+                case RunMode.web:
+                    {
+                        return Web_DataQuerier.SingleInstance;
+                    }
+                default:
+                    {
+                        throw new NotSupportedException(runMode.ToString());
+                    }
+            }
+        }
     }
-
-   
-    
 }
