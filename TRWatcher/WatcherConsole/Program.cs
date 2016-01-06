@@ -4,6 +4,8 @@ using System.Net;
 using System.Text;
 using Newtonsoft.Json;
 using DataContract;
+using Newtonsoft.Json.Linq;
+using System.IO;
 
 [assembly: log4net.Config.XmlConfigurator(ConfigFileExtension = "log4net", Watch = true)]
 namespace WatcherConsole
@@ -29,11 +31,20 @@ namespace WatcherConsole
                     @"BLLTest_PCT:BL.Operation.PostCheckInTest.PCRCompileTest.PCRPackunPack_Par_R260_NA",
                 };
 
-                foreach (var item in CareList)
+                foreach (var item_CareList in CareList)
                 {
-                    var testResult = TRFactory.SingleInstance.CreateDataQuerier(RunMode.web).GetHistoryOfFailedCases(item);
-                    
-                    
+                    var testResult = TRFactory.SingleInstance.CreateDataQuerier(RunMode.local).GetHistoryOfFailedCases(item_CareList);
+
+                    JArray History = (JArray)testResult["History"];
+
+                    foreach (var item_History in History)
+                    {
+                        string Message = item_History.Value<string>("Message");
+                        if(MessageMatchQuery(Message))
+                        {
+                            File.AppendAllText(@"d:\_test\ThreadSafeIssue\logFailedCasesMessage.json", Message+"\n==========================================\n");
+                        }
+                    }
                 }
 
             }
@@ -42,6 +53,18 @@ namespace WatcherConsole
 
             }
 
+        }
+
+        private static bool MessageMatchQuery(string message)
+        {
+            if(message.Contains("ThreadSafeIssue"))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public static string GetMessageVersion(string originalMessage)

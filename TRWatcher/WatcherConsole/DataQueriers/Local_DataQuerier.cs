@@ -11,7 +11,7 @@ using Newtonsoft.Json.Linq;
 
 namespace Roles
 {
-    class Local_DataQuerier : Singleton<Web_DataQuerier>, IDataQuerier
+    class Local_DataQuerier : Singleton<Local_DataQuerier>, IDataQuerier
     {
         public JObject GetHistoryOfFailedCases(string caseItem)
         {
@@ -23,7 +23,8 @@ namespace Roles
         private static JObject GetJSonResultFromFile(string MockJsonFile)
         {
             string ExecutingAssemblyPath = Assembly.GetExecutingAssembly().Location;
-            string FilePath = Path.Combine(ExecutingAssemblyPath, "LocalTestResource", MockJsonFile);
+            string DirectoryName = (new FileInfo(ExecutingAssemblyPath)).DirectoryName;
+            string FilePath = Path.Combine(DirectoryName, "LocalTestResource", MockJsonFile);
 
             string jsonContent = File.ReadAllText(FilePath);
             var jArray = JsonConvert.DeserializeObject(jsonContent) as Newtonsoft.Json.Linq.JObject;
