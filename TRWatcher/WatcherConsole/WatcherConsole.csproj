@@ -51,14 +51,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataAnalyser\CurrentFailedCase_Analyser.cs" />
     <Compile Include="DataAnalyser\CaseHistory_Analyser.cs" />
     <Compile Include="DataAnalyser\IDataAnalyser.cs" />
-    <Compile Include="DataQueriers\DataQuerier.cs" />
+    <Compile Include="DataQueriers\OnlineDataQuerier.cs" />
+    <Compile Include="DataQueriers\LocalDataQuerier.cs" />
     <Compile Include="DataQueriers\IDataQuerier.cs" />
     <Compile Include="FailedCaseMonitor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TRFactory.cs" />
+    <Compile Include="Factory\TRFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -5,13 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Roles
+
 {
-    public class CaseHistory_Analyser : IDataAnalyser
+    public class CurrentFailedCase_Analyser : IDataAnalyser
     {
         #region SingleInstance
-        static CaseHistory_Analyser _instance = null;
+        static CurrentFailedCase_Analyser _instance = null;
         static Object lock_CreateSingleInstance = new Object();
-        public static CaseHistory_Analyser SingleInstance
+        public static CurrentFailedCase_Analyser SingleInstance
         {
             get
             {
@@ -21,7 +22,7 @@ namespace Roles
                     {
                         if (_instance == null)
                         {
-                            _instance = new CaseHistory_Analyser();
+                            _instance = new CurrentFailedCase_Analyser();
                         }
                     }
                 }
@@ -30,12 +31,10 @@ namespace Roles
 
             }
         }
-        private CaseHistory_Analyser()
+        private CurrentFailedCase_Analyser()
         {
 
         }
         #endregion
-
-
     }
 }

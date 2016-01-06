@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Roles
 {
-    public class CaseHistory_Analyser : IDataAnalyser
+    class OnlineDataQuerier
     {
         #region SingleInstance
-        static CaseHistory_Analyser _instance = null;
+        static OnlineDataQuerier _instance = null;
         static Object lock_CreateSingleInstance = new Object();
-        public static CaseHistory_Analyser SingleInstance
+        public static OnlineDataQuerier SingleInstance
         {
             get
             {
@@ -21,7 +21,7 @@ namespace Roles
                     {
                         if (_instance == null)
                         {
-                            _instance = new CaseHistory_Analyser();
+                            _instance = new OnlineDataQuerier();
                         }
                     }
                 }
@@ -30,12 +30,12 @@ namespace Roles
 
             }
         }
-        private CaseHistory_Analyser()
+        private OnlineDataQuerier()
         {
 
         }
         #endregion
-
-
     }
+
+
 }

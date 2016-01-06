@@ -12,18 +12,26 @@ namespace WatcherConsole
     {
         IDataAnalyser CreateDataAnalyser(DataCategory dataCategory)
         {
-            switch(dataCategory)
+            switch (dataCategory)
             {
                 case DataCategory.CaseHistory:
                     {
-                        return CaseHistory_Analyser.Instance;
-                        break;
+                        return CaseHistory_Analyser.SingleInstance;
                     }
                 case DataCategory.CurrentFailedCase:
                     {
-                        return CurrentFailedCase_Analyser.Instance;
+                        return CurrentFailedCase_Analyser.SingleInstance;
+                    }
+                default:
+                    {
+                        throw new NotSupportedException();
                     }
             }
         }
+
+        IDataQuerier CreateDataQuerier(WorkMode)
     }
+
+   
+    
 }
