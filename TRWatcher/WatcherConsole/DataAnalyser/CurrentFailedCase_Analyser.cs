@@ -24,7 +24,6 @@ namespace Roles
         public void AnalyzeCases(object Context)
         {
             JArray currentFailedCases = Context as JArray;
-
             foreach (var item_currentFailedCases in currentFailedCases)
             {
                 string Message = item_currentFailedCases.Value<string>("Message");
@@ -46,6 +45,8 @@ namespace Roles
                     {
                         cases_version[NameOfCase] = VersionOfMessage;
                         File.AppendAllText(FullName_fileOfCase, "\n============================================\n" + Message);
+                        System.Console.WriteLine();
+                        System.Console.WriteLine("Updated: " + FullName_fileOfCase);
                     }
                 }
             }

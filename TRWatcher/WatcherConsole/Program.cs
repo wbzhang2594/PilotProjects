@@ -87,6 +87,7 @@ namespace WatcherConsole
                 JArray currentFailCases = TRFactory.SingleInstance.CreateDataQuerier(RunMode.web).GetUpToDateFailedCases() as JArray;
                 TRFactory.SingleInstance.CreateDataAnalyser(DataCategory.CurrentFailedCase).AnalyzeCases(currentFailCases);
 
+                System.Console.Write('.');
                 for (int i = 0; i < 10; i++)
                 {
                     if (token1.IsCancellationRequested)
