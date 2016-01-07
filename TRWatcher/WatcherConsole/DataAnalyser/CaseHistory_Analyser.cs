@@ -10,6 +10,9 @@ namespace Roles
 {
     class CaseHistory_Analyser : Singleton<CaseHistory_Analyser>, IDataAnalyser
     {
-        
+        public void AnalyzeCases(object Context)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

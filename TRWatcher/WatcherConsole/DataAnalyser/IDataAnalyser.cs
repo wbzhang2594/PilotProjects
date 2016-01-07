@@ -9,5 +9,6 @@ namespace Roles
 {
     interface IDataAnalyser
     {
+        void AnalyzeCases(object Context);
     }
 }
