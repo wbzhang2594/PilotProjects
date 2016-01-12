@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Roles
 
 {
-    interface IDataAnalyser
+    interface IDataAnalyser : IDisposable
     {
         void AnalyzeCases(object Context);
     }

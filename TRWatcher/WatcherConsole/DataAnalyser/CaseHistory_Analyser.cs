@@ -12,7 +12,12 @@ namespace Roles
     {
         public void AnalyzeCases(object Context)
         {
-            throw new NotImplementedException();
+            
+        }
+
+        public void Dispose()
+        {
+            
         }
     }
 }

@@ -91,7 +91,10 @@ namespace WatcherConsole
                 for (int i = 0; i < 10; i++)
                 {
                     if (token1.IsCancellationRequested)
+                    {
+                        TRFactory.SingleInstance.CreateDataAnalyser(DataCategory.CurrentFailedCase).Dispose();
                         token1.ThrowIfCancellationRequested();
+                    }
                     Thread.Sleep(1000);
                 }
             } while (true);
