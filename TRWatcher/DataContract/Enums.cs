@@ -17,4 +17,11 @@ namespace DataContract
         local,
         web,
     }
+
+    public enum RelationLogic
+    {
+        AND,
+        OR,
+        NOT,
+    }
 }

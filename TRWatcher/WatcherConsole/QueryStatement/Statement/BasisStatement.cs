@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace WatcherConsole.QueryStatement
 {
-    interface IStatementHandler
+    public class BasisStatement:IStatement
     {
-        bool HandleStatement(IStatement statement, object Context);
     }
 }
