@@ -24,4 +24,10 @@ namespace DataContract
         OR,
         NOT,
     }
+
+    public enum SearchLogic
+    {
+        Contains,
+
+    }
 }

@@ -7,7 +7,7 @@ using Newtonsoft.Json.Linq;
 
 namespace Roles
 {
-    interface IDataQuerier
+    public interface IDataQuerier
     {
         JToken GetUpToDateFailedCases();
 

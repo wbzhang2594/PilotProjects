@@ -9,7 +9,7 @@ using DataContract.DesignPattern;
 
 namespace WatcherConsole
 {
-    class TRFactory : Singleton<TRFactory>
+    public class TRFactory : Singleton<TRFactory>
     {
         public IDataAnalyser CreateDataAnalyser(DataCategory dataCategory)
         {

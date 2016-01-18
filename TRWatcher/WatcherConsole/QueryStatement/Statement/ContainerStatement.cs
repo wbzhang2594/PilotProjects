@@ -17,5 +17,15 @@ namespace WatcherConsole.QueryStatement
         public RelationLogic RelLogic { get; set; }
 
         public List<IStatement> ChildrenStatements { get; set; }
+
+        public void Accept(IStatementHandler statementHandler)
+        {
+            statementHandler.Visit(this);
+
+            foreach(IStatement statementItem in ChildrenStatements)
+            {
+                statementHandler.Visit(statementItem);
+            }
+        }
     }
 }

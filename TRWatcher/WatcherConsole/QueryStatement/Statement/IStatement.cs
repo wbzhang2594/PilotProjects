@@ -8,5 +8,6 @@ namespace WatcherConsole.QueryStatement
 {
     public interface IStatement
     {
+        void Accept(IStatementHandler statementHandler);
     }
 }
