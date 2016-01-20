@@ -18,9 +18,9 @@ namespace WatcherConsole.QueryStatement
 
         }
 
-        public void Accept(IStatementHandler statementHandler)
+        public void Accept(IStatementHandler statementHandler, object Context_Of_Statement)
         {
-            statementHandler.Visit(this);
+            statementHandler.Visit(this, Context_Of_Statement);
         }
     }
 }

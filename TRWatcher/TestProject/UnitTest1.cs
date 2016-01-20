@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using WatcherConsole.QueryStatement.StatementHandler;
 using DataContract;
+using WatcherConsole;
 
 namespace TestProject
 {
@@ -12,9 +13,7 @@ namespace TestProject
         [TestMethod]
         public void TestMethod1()
         {
-            object currentFailCases = TRFactory.SingleInstance.CreateDataQuerier(RunMode.web).GetUpToDateFailedCases() as JArray;
 
-            StatementCalculator sc = new StatementCalculator()
         }
     }
 }

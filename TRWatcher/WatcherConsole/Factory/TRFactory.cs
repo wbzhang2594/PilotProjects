@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DataContract.DesignPattern;
+using WatcherConsole.RelationshipLogicHandlers;
 
 namespace WatcherConsole
 {
@@ -26,6 +27,21 @@ namespace WatcherConsole
                 default:
                     {
                         throw new NotSupportedException(dataCategory.ToString());
+                    }
+            }
+        }
+
+        internal IRelationshipHandler CreateRelationshipLogicHandler(RelationLogic relLogic)
+        {
+            switch(relLogic)
+            {
+                case RelationLogic.AND:
+                    {
+                        return new AndLogic_for_JTokenSearcher();
+                    }
+                default:
+                    {
+                        throw new NotSupportedException(relLogic.ToString());
                     }
             }
         }

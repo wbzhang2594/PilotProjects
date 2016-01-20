@@ -8,6 +8,8 @@ using Newtonsoft.Json.Linq;
 using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
+using WatcherConsole.QueryStatement.StatementHandler;
+using WatcherConsole.QueryStatement;
 
 [assembly: log4net.Config.XmlConfigurator(ConfigFileExtension = "log4net", Watch = true)]
 namespace WatcherConsole
@@ -53,30 +55,58 @@ namespace WatcherConsole
             //}
 
 
-            try
-            {
+            //try
+            //{
 
-                Task task = new Task(MonitoringFailedCases, token1);
+            //    Task task = new Task(MonitoringFailedCases2, token1);
 
-                task.Start();
+            //    task.Start();
 
-                while ('x' != System.Console.Read())
-                {
-                    Thread.Sleep(1000);
-                }
+            //    while ('x' != System.Console.Read())
+            //    {
+            //        Thread.Sleep(1000);
+            //    }
 
-                source1.Cancel();
-                task.Wait();
-            }
-            catch (Exception ex)
-            {
+            //    source1.Cancel();
+            //    task.Wait();
+            //}
+            //catch (Exception ex)
+            //{
 
-            }
-            finally
-            {
-                source1.Dispose();
-            }
+            //}
+            //finally
+            //{
+            //    source1.Dispose();
+            //}
 
+            MonitoringFailedCases2();
+        }
+
+        private static void MonitoringFailedCases2()
+        {
+            JArray currentFailCases = TRFactory.SingleInstance.CreateDataQuerier(RunMode.web).GetUpToDateFailedCases() as JArray;
+
+            IStatement statement = CreateStatement();
+            StatementCalculator sc = new StatementCalculator();
+
+            List<JToken>[] parameters = new List<JToken>[] { new List<JToken>(currentFailCases), new List<JToken>() };
+            sc.HandleStatement(statement, parameters);
+        }
+
+        private static IStatement CreateStatement()
+        {
+            ContainerStatement s1 = new ContainerStatement();
+            s1.RelLogic = RelationLogic.AND;
+
+            BasisStatement bs1_1 = new BasisStatement("Message", "Name", SearchLogic.Contains);
+            BasisStatement bs1_2 = new BasisStatement("Message", "ASTRO", SearchLogic.Contains);
+            BasisStatement bs1_3 = new BasisStatement("Message", "Languagepack", SearchLogic.Contains);
+
+            s1.ChildrenStatements.Add(bs1_1);
+            s1.ChildrenStatements.Add(bs1_2);
+            s1.ChildrenStatements.Add(bs1_3);
+
+            return s1;
         }
 
         private static void MonitoringFailedCases()

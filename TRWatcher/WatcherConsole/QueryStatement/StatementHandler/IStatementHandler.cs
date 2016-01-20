@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataContract.Arguments;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,10 +9,10 @@ namespace WatcherConsole.QueryStatement
 {
     public interface IStatementHandler
     {
-        bool HandleStatement(IStatement statement, object Context);
+        object HandleStatement(IStatement statement, ToSearchTokens Context);
 
-        bool Visit(BasisStatement basisStatement);
+        void Visit(BasisStatement basisStatement, ToSearchTokens Context);
 
-        bool Visit(ContainerStatement containerStatement)
+        void Visit(ContainerStatement containerStatement, ToSearchTokens Context);
     }
 }

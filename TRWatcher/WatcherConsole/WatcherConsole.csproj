@@ -66,6 +66,8 @@
     <Compile Include="QueryStatement\Statement\BasisStatement.cs" />
     <Compile Include="QueryStatement\Statement\ContainerStatement.cs" />
     <Compile Include="QueryStatement\Statement\IStatement.cs" />
+    <Compile Include="RelationshipLogicHandlers\AndLogic_for_JTokenSearcher.cs" />
+    <Compile Include="RelationshipLogicHandlers\IRelationshipHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
